@@ -4,6 +4,7 @@ public class AntonAndPolyhedrons {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// Problem https://codeforces.com/problemset/problem/785/A
 		int n,sides = 0;
 		String shape;
 		Scanner scan = new Scanner(System.in);

@@ -5,6 +5,7 @@ public class GennadyAndACardGame {
  
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// Problem https://codeforces.com/contest/1097/problem/A
 		boolean canPut = false;
 		byte[] allByteArray = new byte[12];
 		Scanner scan = new Scanner(System.in);

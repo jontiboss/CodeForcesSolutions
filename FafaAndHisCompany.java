@@ -4,7 +4,7 @@ public class FafaAndHisCompany {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// Problem https://marketplace.eclipse.org/marketplace-client-intro?mpc_install=4240174
+		// Problem https://codeforces.com/problemset/problem/935/A
 		int combinations = 0;
 		Scanner scan = new Scanner(System.in);
 		int employees = scan.nextInt();

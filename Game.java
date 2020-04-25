@@ -8,6 +8,7 @@ public class Game {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// Problem https://codeforces.com/problemset/problem/984/A
 		Reader read = new Reader();
 		int[] n = new int[read.nextInt()];
 		for(int i=0;i<n.length;i++) {

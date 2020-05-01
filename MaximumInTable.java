@@ -1,13 +1,16 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class MaximumInTable {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// Problem https://codeforces.com/problemset/problem/509/A
-		Scanner scan = new Scanner(System.in);
+		// https://github.com/jontiboss
+		Reader scan = new Reader();
 		int n = scan.nextInt();
-		scan.close();
 		int[][] matrix = new int[n][n];
 		//Fill the first row and collon with ones
 		for(int i=0;i<n;i++) {
@@ -26,5 +29,36 @@ public class MaximumInTable {
 		
 		
 	}
+	static class Reader 
+	{ 
+		BufferedReader br; 
+		StringTokenizer st; 
 
+		public Reader() 
+		{ 
+			br = new BufferedReader(new
+					InputStreamReader(System.in)); 
+		} 
+
+		String next() 
+		{ 
+			while (st == null || !st.hasMoreElements()) 
+			{ 
+				try
+				{ 
+					st = new StringTokenizer(br.readLine()); 
+				} 
+				catch (IOException e) 
+				{ 
+					e.printStackTrace(); 
+				} 
+			} 
+			return st.nextToken(); 
+		} 
+
+		int nextInt() 
+		{ 
+			return Integer.parseInt(next()); 
+		} 
+	}
 }

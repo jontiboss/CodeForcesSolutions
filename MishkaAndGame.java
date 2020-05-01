@@ -1,11 +1,15 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class MishkaAndGame {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// Problem https://codeforces.com/contest/703/problem/A		
-		Scanner scan = new Scanner(System.in);
+		// Problem https://codeforces.com/contest/703/problem/A	
+		// https://github.com/jontiboss
+		Reader scan = new Reader();
 		int round = scan.nextInt();
 		int mishka=0,chris=0;
 		int temp1,temp2;
@@ -40,7 +44,39 @@ public class MishkaAndGame {
 		if(mishka==chris){
 			System.out.println("Friendship is magic!^^");
 		}
-		scan.close();
+		
 	}
+	static class Reader 
+	{ 
+		BufferedReader br; 
+		StringTokenizer st; 
 
+		public Reader() 
+		{ 
+			br = new BufferedReader(new
+					InputStreamReader(System.in)); 
+		} 
+
+		String next() 
+		{ 
+			while (st == null || !st.hasMoreElements()) 
+			{ 
+				try
+				{ 
+					st = new StringTokenizer(br.readLine()); 
+				} 
+				catch (IOException e) 
+				{ 
+					e.printStackTrace(); 
+				} 
+			} 
+			return st.nextToken(); 
+		} 
+
+		int nextInt() 
+		{ 
+			return Integer.parseInt(next()); 
+		} 
+
+	}
 }

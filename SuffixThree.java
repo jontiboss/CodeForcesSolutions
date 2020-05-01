@@ -1,11 +1,15 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class SuffixThree {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// Problem https://codeforces.com/problemset/problem/1281/A
-		Scanner scan = new Scanner(System.in);
+		// https://github.com/jontiboss
+		Reader scan = new Reader();
 		int n = scan.nextInt();
 		for(int i = 0; i<n; i++) {
 		byte[] word = scan.next().getBytes();
@@ -22,7 +26,39 @@ public class SuffixThree {
 		}
 			
 		}	
-		scan.close();
+		
 	}
+	static class Reader 
+	{ 
+		BufferedReader br; 
+		StringTokenizer st; 
 
+		public Reader() 
+		{ 
+			br = new BufferedReader(new
+					InputStreamReader(System.in)); 
+		} 
+
+		String next() 
+		{ 
+			while (st == null || !st.hasMoreElements()) 
+			{ 
+				try
+				{ 
+					st = new StringTokenizer(br.readLine()); 
+				} 
+				catch (IOException e) 
+				{ 
+					e.printStackTrace(); 
+				} 
+			} 
+			return st.nextToken(); 
+		} 
+
+		int nextInt() 
+		{ 
+			return Integer.parseInt(next()); 
+		} 
+
+	}
 }

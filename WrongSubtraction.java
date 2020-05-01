@@ -1,4 +1,7 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class WrongSubtraction {
 
@@ -6,12 +9,11 @@ public class WrongSubtraction {
 		// TODO Auto-generated method stub
 		//Problem https://codeforces.com/problemset/problem/977/A
 		int n,k;
-		Scanner scan = new Scanner(System.in);
+		Reader scan = new Reader();
 		//System.out.println("enter n");
 		n = scan.nextInt();
 		//System.out.println("enter k");
 		k = scan.nextInt();
-		scan.close();
 		
 		//Subtract one k times.
 		for(int i =0;i<k;i++) {
@@ -28,5 +30,36 @@ public class WrongSubtraction {
 		//print out the final result.
 		System.out.println(n);
 	}
+	static class Reader 
+	{ 
+		BufferedReader br; 
+		StringTokenizer st; 
 
+		public Reader() 
+		{ 
+			br = new BufferedReader(new
+					InputStreamReader(System.in)); 
+		} 
+
+		String next() 
+		{ 
+			while (st == null || !st.hasMoreElements()) 
+			{ 
+				try
+				{ 
+					st = new StringTokenizer(br.readLine()); 
+				} 
+				catch (IOException e) 
+				{ 
+					e.printStackTrace(); 
+				} 
+			} 
+			return st.nextToken(); 
+		} 
+
+		int nextInt() 
+		{ 
+			return Integer.parseInt(next()); 
+		} 
+	}
 }

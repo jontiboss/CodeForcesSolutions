@@ -1,18 +1,21 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class RestoringThreeNumbers {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// Problem https://codeforces.com/problemset/problem/1154/A
+		// https://github.com/jontiboss
 		Long tempX4;
 		Long[] nbrs = new Long[4];
-		Scanner scan = new Scanner(System.in);
+		Reader scan = new Reader();
 		nbrs[0] = scan.nextLong();
 		nbrs[1] = scan.nextLong();
 		nbrs[2] = scan.nextLong();
 		nbrs[3] = scan.nextLong();
-		scan.close();
 		//solving using equation system
 		//		a+b=x1,
 		//		a+b=x2
@@ -30,5 +33,41 @@ public class RestoringThreeNumbers {
 		}
 
 	}
+	static class Reader 
+	{ 
+		BufferedReader br; 
+		StringTokenizer st; 
 
+		public Reader() 
+		{ 
+			br = new BufferedReader(new
+					InputStreamReader(System.in)); 
+		} 
+
+		String next() 
+		{ 
+			while (st == null || !st.hasMoreElements()) 
+			{ 
+				try
+				{ 
+					st = new StringTokenizer(br.readLine()); 
+				} 
+				catch (IOException e) 
+				{ 
+					e.printStackTrace(); 
+				} 
+			} 
+			return st.nextToken(); 
+		} 
+
+		int nextInt() 
+		{ 
+			return Integer.parseInt(next()); 
+		}
+		long nextLong() 
+		{ 
+			return Long.parseLong(next()); 
+		} 
+	}
+	
 }

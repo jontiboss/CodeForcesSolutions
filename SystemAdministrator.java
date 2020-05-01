@@ -1,11 +1,14 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class SystemAdministrator {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// Problem https://codeforces.com/problemset/problem/245/A
-		Scanner scan = new Scanner(System.in);
+		Reader scan = new Reader();
 		int n = scan.nextInt();
 		int reachedA= 0,lostA= 0,reachedB = 0,lostB = 0,ping;
 		for(int i=0;i<n;i++) {
@@ -21,7 +24,7 @@ public class SystemAdministrator {
 				lostB += scan.nextInt();
 			}
 		}
-		scan.close();
+		
 		//If the sum of reached package is more or equal to the lost package, then the server is considered live, else dead.
 		if(reachedA>=lostA) {
 			System.out.println("LIVE");
@@ -36,5 +39,37 @@ public class SystemAdministrator {
 			System.out.println("DEAD");
 		}
 	}
+	static class Reader 
+	{ 
+		BufferedReader br; 
+		StringTokenizer st; 
 
+		public Reader() 
+		{ 
+			br = new BufferedReader(new
+					InputStreamReader(System.in)); 
+		} 
+
+		String next() 
+		{ 
+			while (st == null || !st.hasMoreElements()) 
+			{ 
+				try
+				{ 
+					st = new StringTokenizer(br.readLine()); 
+				} 
+				catch (IOException e) 
+				{ 
+					e.printStackTrace(); 
+				} 
+			} 
+			return st.nextToken(); 
+		} 
+
+		int nextInt() 
+		{ 
+			return Integer.parseInt(next()); 
+		} 
+
+	}
 }

@@ -16,7 +16,8 @@ public class AnotherOneBitesTheDust {
 		Reader reader = new Reader();
 		Long a = reader.nextLong();
 		Long  b = reader.nextLong();
-		Long c = reader.nextLong()*2;
+		//bit shift is faster than multiply by 2
+		Long c = reader.nextLong()<<1;
 		//If the difference between b and a is bigger or equal to two, we don't have any use of the extra b's and the maximum
 		//String we could form is therefore a+1. The same rule apply for a.
 		if(b-a >=2) {

@@ -16,7 +16,7 @@
     		for(int i =0;i<tests;i++) {
     			String sum = reader.next();
     	
-    			if(sum.equals("X++")||sum.equals("++X") ) {
+    			if(sum.contains("++")) {
     				answer++;
     			}
     			else {

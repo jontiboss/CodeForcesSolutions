@@ -21,7 +21,7 @@ public class SoldierAndBananas {
 //		int iTot = bananas*(bananas+1)>>1;
 //		//compute the total price for all the bananas
 //		int totalPrice = firstPrice*iTot;
-//		//print how much money the soilder has to lend
+//		//print how much money the soldier has to lend
 //		int lending =totalPrice-money;
 		if(lending<0) {
 			System.out.println(0);

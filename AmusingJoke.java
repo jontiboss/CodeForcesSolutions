@@ -8,7 +8,7 @@ public class AmusingJoke {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// Problem http://codeforces.com/problemset/problem/271/A
+		// Problem http://codeforces.com/problemset/problem/141/A
 		// For more solutions check https://github.com/jontiboss
 		Reader reader = new Reader();
 		char[] w1 = (reader.next() + reader.next()).toCharArray();

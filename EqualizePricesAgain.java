@@ -7,7 +7,7 @@ public class EqualizePricesAgain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// Problem http://codeforces.com/problemset/problem/271/A
+		// Problem http://codeforces.com/problemset/problem/1234/A
 		// For more solutions check https://github.com/jontiboss
 		Reader reader = new Reader();
 		double queries = reader.nextDouble();

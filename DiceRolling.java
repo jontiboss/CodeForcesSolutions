@@ -13,7 +13,7 @@ public class DiceRolling {
 			int wantedNbr = reader.nextInt();
 			int rolls = 0;
 			int remainder = wantedNbr;
-			//2,3,5,7, 4 6
+			//Calculate the minimum rolls you have to make to reach your wanted number.
 			if(wantedNbr>=7) {
 				rolls += remainder/7;
 				remainder = remainder%7;
